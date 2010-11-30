@@ -1,0 +1,488 @@
+/* tie komenta  re este niesu akoze naozaj [= vlastne aj toto css je taka provizooria; bo by som chcel zmenit system selektorov [aj v kode] */
+
+/* pasteka */
+body {
+  color: #6DAE42;
+  margin:0;
+  padding:0;
+  background-color: #000;
+  font-family: Tahoma, 'Lucida Grande CE', lucida, sans-serif;
+  height: 100%;
+	font-size:70%;
+}
+
+html>body {
+  font-size:11px;
+}
+
+inframe {
+	width: 90%;
+	height: 230px;
+}
+
+td {
+  font-size:70%;
+  font-family: Tahoma, 'Lucida Grande CE', lucida, sans-serif;
+  /*padding: 0.1em 0.1em 0.1em 0.1em; */
+}
+tr>td {
+  font-size:11px;
+}
+
+
+
+
+/* header [momentalne vypnute fixnutie] */
+.t1 {
+	position: relative;
+	margin: 0;
+	text-align: center;
+	background-color: #000;
+	width: 100%;
+	height: 20px;
+  line-height:1em;
+}
+
+.t1 a {
+  font-family: Tahoma, 'Lucida Grande CE', lucida, sans-serif;
+  font-size: 1em;
+}
+
+.t2 {
+	/* height: 20px;*/
+}
+
+/* obsah nody */
+
+#topic {
+	width: 662px;
+	padding: 2px;
+	display: table;
+}
+
+
+a {
+	color: white;
+	text-decoration: none;
+  font-family: Tahoma, 'Lucida Grande CE', lucida, sans-serif;
+  font-size: 1em;
+}
+
+a:hover {
+	color: red;
+}
+
+a.mail {
+	color: red;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+  font-family: Tahoma, 'Lucida Grande CE', lucida, sans-serif;
+  font-size: 1em;
+}
+
+a.mail:hover {
+	color: white;
+}
+
+
+.bordered {
+	border: 2px solid #6DAE42;
+}
+
+.bordered2 {
+	border-left: solid 1pt #6DAE42;
+	border-right: solid 1pt #6DAE42;
+	border-bottom: solid 1pt #6DAE42;
+}
+
+
+
+.header {
+	background-color: #333;
+	border-bottom: solid 1px #6DAE42;
+	height: 100%;
+	width: 100%;
+	vertical-align: top;
+	align: left;
+	padding: 0pt;
+}
+
+.header input {
+  margin:0;
+  padding:0;
+  width: 8pt;
+  height: 8pt;
+  background: #444;   /* len opera */
+  border: 1px solid #000;   /* len opera */
+  color: #000;
+  opacity: 0.8;
+}
+
+.important {
+	font-weight: bold;
+	text-align: center;
+}
+
+.most_important {
+  font-weight: bold; 
+  color: red;
+  size:70%;
+}
+
+.important_y { color: red; display: block; font-size: 2em; margin: .67em 0 }
+.important_n { color: green; display: block; font-size: 2em; margin: .67em 0 }
+
+/* userlisty a podobny sajrajt ----------------------------------------- */
+
+.active_user_img {
+	float: left;
+	width: 50px;
+	margin: 0 3px 3px 0;
+        _margin-bottom:0;
+}
+
+.active_user_img img { margin:0; padding:0; width: 50px; height:50px; border:0; }
+
+.active_users .active_user_name {
+	text-align: center;
+}
+
+.node_userlist {
+	width: 666px;
+	text-align: center;
+	margin-bottom: 10px;
+	position: relative;
+}
+
+.node_userlist img {
+	width: 50px;
+	height: 50px;
+	border: 0;
+	margin: 0 3px 3px 0;
+}
+
+/* thread -------------------------------------------------------------- */
+
+/*-neu-*/ /* 
+ul.node_children
+  li.level1 <<... li.levelx>>, li.lvl
+    a.vector
+    div.node_content
+      div.node_header
+        img.node_avatar
+        a.node_login
+        input.node_chosen
+        span.node_header_created
+        span.node_header_k
+        span.node_header_new
+        span.node_header_changed
+        span.node_header_sirotka
+        span.node_header_descendent
+        span.node_header_hardlink
+        span.node_header_title
+          a
+      div.node_body
+  <<ul>>
+*/
+
+div.node_header_title {text-align:center;}
+span.node_header_title_conf:before {content: "| ";}
+
+span.node_header_k, span.node_header_new, span.node_header_changed, span.node_header_sirotka, span.node_header_descendent {
+font-weight: bold; 
+color: red;
+text-transform: uppercase;
+}
+
+span.node_header_hardlink {
+font-weight: bold;
+text-transform: uppercase;
+}
+
+ul.node_children {
+position: relative;
+margin: 2em 0 0 0;
+padding:0;
+width:666px;
+}
+
+li.lvl {
+list-style-type:none;
+border-left: 1px dotted #323232;
+padding:1.6em 0 2px 52px; 
+}
+
+li.lvl ul {
+margin:0;
+padding:0;
+}
+
+li.level1 {
+border-bottom: 1px dotted #323232;
+}
+
+a.vector {
+position: absolute;
+left:0;
+margin-top:-1.8em;
+font-size: 0.8em; 
+}
+
+a.actionToggleThread {
+position: absolute;
+left:-1.2em;
+margin-top:-1.8em;
+font-size: 0.8em;
+display:inline !important;
+}
+
+a.descendants_link {
+position:relative; top:-1em;
+}
+
+div.node_content {
+display:table;
+border-collapse:collapse;
+width:100%;
+margin:0.1em 0 1.3em 0; 
+/*padding: 2px; zadefinovane ako margin pri headry a body*/
+border: 2px solid #6dae42; 
+background: #000;
+position:relative;
+}
+
+div.node_header {
+margin:2px; padding:0.2em;
+background: #333;
+position:relative;
+}
+
+span.hidden_header_title_nodename {
+color: #323232;
+padding-left:0.8em;
+}
+
+div.node_body {
+background:#000;
+margin:2px;
+}
+
+img.node_avatar {
+position:absolute;
+left:-57px;
+top:-4px;
+width:50px;
+}
+
+/**/
+
+.node_chosen {
+margin:0 0.6em 0 0.6em;
+padding:0;
+color: black;
+height: 8pt;
+width: 8pt;
+background: #444; /* len opera */
+border: 1px solid #000;/* len opera */
+}
+
+
+li.ie-only.lvl {
+width:100%;
+}
+.ie-only.node_header {
+width:100%;
+}
+div.ieonly.node_body, div.ieonly.bordered {
+word-wrap: break-word;
+}
+/* docasne tu */
+div#topic {
+_word-wrap: break-word;
+} 
+/*-----*/
+
+
+
+
+/* form ---------------------------------------------------------------- */
+input, button {
+	color: white;
+	background-color: #000;
+	vertical-align: middle;
+	border: solid 1px #6DAE42;
+	height: 18px;
+	font-family: Tahoma, 'Lucida Grande CE', lucida, sans-serif;
+        font-size: 8pt;
+}
+
+
+
+
+input.small {
+	color: white;
+	background-color: #000;
+	width: 50px;
+	vertical-align: middle;
+	border: solid 1px #6DAE42;
+	height: 18px;
+	font-family: Tahoma, 'Lucida Grande CE', lucida, sans-serif;
+        font-size: 8pt;
+line-height:1em;
+}
+
+select {
+	color: white;
+	background-color: #000;
+	vertical-align: middle;
+	border: solid 1px #6DAE42;
+	height: 18px;
+	font-family: Tahoma, 'Lucida Grande CE', lucida, sans-serif;
+        font-size: 8pt;
+}
+
+textarea {
+	width: 666px;
+	height: 123px;
+	background-color: #000;
+	border: 1px solid #6DAE42;
+	color: white;
+}
+
+textarea.node_content {
+	width: 800px;
+	height: 666px;
+	background-color: #000;
+	color: white;
+}
+
+textarea.small {
+	width: 90%;
+	height: 42px;
+	background-color: #000;
+	overflow: hidden;
+	font-color: white;
+	color: white;
+}
+
+.childVector {
+	font-size: 0.8em;
+}
+
+.controls { margin-top:3px;  } 
+.controls input { margin-right: 2px; }
+
+.toolbar { margin: 2px 0;}
+.toolbar input { margin-right: 2px; }
+
+.add_put { margin-top: 3px; }
+
+
+/* mejl ---------------------------------------------------------------- */
+
+#mail_form { margin-bottom:10px }
+#mail_form .controls { margin-top:2px; }
+.message .header { padding:0.2em }
+
+
+/* friend hilight [zatim len v blogs] ---------------------------------- */
+.hilight {
+	background-color: #222;
+}
+.hilight .header {
+	background-color: #555;
+}
+
+
+/* user panel ---------------------------------------------------------- */
+#panel {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: none;
+	z-index: 23;
+	color: #FFF;
+	background: #000;
+	border: 1px solid #6DAE42;
+	padding: 2px;
+	margin: 0;
+}
+#panel .panel_btn {
+	border: 0;
+	color: #FFF;
+	background: transparent;
+	margin: 0;
+	padding: 1px 0 1px 0;
+}
+#panel .panel_btn:hover {
+	color: #F00;
+}
+#panel form {
+	padding: 0;
+	margin: 0;
+}
+
+/* quick search ------------------------------------ */
+#quick_search {
+  width: 120px;
+  color: #999;
+}
+
+#quick_search.qs_active {
+  color: #FFF;
+}
+
+#quick_search_result {
+  display: none;
+  width: 200px;
+  border-width: 1px 1px 0px 1px;
+  border-color: #333;
+  border-style: solid;
+  text-align: left;
+  position: absolute;
+  z-index: 666;
+}
+
+#quick_search_result a:hover {
+  color: #999;
+}
+
+.qs_result, .qs_result_hover {
+  display: block;
+  color: #999;
+  background: #000;
+  padding: 1px 2px;
+  border-bottom: 1px solid #333;
+}
+
+.qs_result_hover {
+  color: #999;
+  background: #333;
+}
+
+#quick_search_result span {
+  color: #FFF;
+}
+
+#quick_search_result .qs_hilight {
+  font-weight: bold;
+  background: #666;
+}
+
+#left-panel table, #left-panel input {
+	width:90%;
+}
+
+hr {
+	color: #6DAE42;
+	background-color: #6DAE42;
+	border-color: #6DAE42;
+}
+
+#left-panel {
+	/* border: 1px solid #6DAE42; */
+	width: 90%;
+	text-align: center;
+}
+
